@@ -1,0 +1,23 @@
+my name is Sam I am 67 years old
+['the first thing']
+the first thing
+the second thing
+the third thing
+the fourth thing
+the fifth thing
+the sixth thing
+100
+the number is bigger than 0
+121
+the number is bigger than 0
+2
+the number is bigger than 0
+332
+the number is bigger than 0
+64
+the number is bigger than 0
+-3000
+that number is less than 0!
+30
+the number is bigger than 0
+hello!!!! Marx
