@@ -1,0 +1,589 @@
+CL
+/
+new york
+/
+post
+https://post.craigslist.org/c/nyc
+account
+https://accounts.craigslist.org/login/home
+None
+#
+None
+#
+CL
+/
+save search
+https://accounts.craigslist.org/login?rt=L&rp=%2Fsavesearch%2Fsave%3FURL%3Dhttps%253A%252F%252Fnewyork%252Ecraigslist%252Eorg%252Fsearch%252Fbar
+barter
+/search/bar
+reset
+/search/bar
+safety tips
+https://www.craigslist.org/about/safety
+prohibited items
+https://www.craigslist.org/about/prohibited
+product recalls
+https://www.craigslist.org/about/recalled_items
+avoiding scams
+https://www.craigslist.org/about/scams
+None
+/search/bar?sort=date
+<<
+/search/bar
+< prev
+/search/bar
+next > 
+/search/bar?s=120
+
+
+https://newyork.craigslist.org/mnh/bar/d/3-race-car-projects/6477617961.html
+3 race car projects
+https://newyork.craigslist.org/mnh/bar/d/3-race-car-projects/6477617961.html
+None
+#
+None
+https://newyork.craigslist.org/jsy/bar/d/classic-car-for-trade/6469981407.html
+classic car for trade
+https://newyork.craigslist.org/jsy/bar/d/classic-car-for-trade/6469981407.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/36-inch-dog-cage-crate-new-in/6461070237.html
+36 inch  dog cage / crate  new in the box
+https://newyork.craigslist.org/lgi/bar/d/36-inch-dog-cage-crate-new-in/6461070237.html
+None
+#
+None
+https://newyork.craigslist.org/wch/bar/d/licensed-mdmedicineoffer/6477575361.html
+LICENSED MD(MEDICINE)OFFER 2VISITS FOR COMPUTER REPAIR SERVICES
+https://newyork.craigslist.org/wch/bar/d/licensed-mdmedicineoffer/6477575361.html
+None
+#
+
+
+https://newyork.craigslist.org/que/bar/d/rare-1980-kawasaki-kz810/6474577031.html
+RARE 1980 KAWASAKI KZ810
+https://newyork.craigslist.org/que/bar/d/rare-1980-kawasaki-kz810/6474577031.html
+None
+#
+
+
+https://newyork.craigslist.org/que/bar/d/2003-porsche-911-cab/6472155287.html
+2003 Porsche 911 cab
+https://newyork.craigslist.org/que/bar/d/2003-porsche-911-cab/6472155287.html
+None
+#
+
+
+https://newyork.craigslist.org/que/bar/d/2003-porsche-911-cab/6477583050.html
+2003 Porsche 911 cab
+https://newyork.craigslist.org/que/bar/d/2003-porsche-911-cab/6477583050.html
+None
+#
+None
+https://newyork.craigslist.org/que/bar/d/motorcycle-permit-exam-cdl/6454930187.html
+MOTORCYCLE PERMIT EXAM CDL PERMIT EXAM GURANTEE PASSING CALL ME NOW
+https://newyork.craigslist.org/que/bar/d/motorcycle-permit-exam-cdl/6454930187.html
+None
+#
+None
+https://newyork.craigslist.org/brx/bar/d/cdl-questions-and-answers-cdl/6453072796.html
+Cdl QUESTIONS AND ANSWERS CDL MOTORCYCLE DRIVING PERMIT EXAM
+https://newyork.craigslist.org/brx/bar/d/cdl-questions-and-answers-cdl/6453072796.html
+None
+#
+None
+https://newyork.craigslist.org/brx/bar/d/motorcycle-permit-exam-cdl/6453073203.html
+MOTORCYCLE PERMIT EXAM CDL PERMIT EXAM GURANTEE PASSSSSING CALL ME NOW
+https://newyork.craigslist.org/brx/bar/d/motorcycle-permit-exam-cdl/6453073203.html
+None
+#
+None
+https://newyork.craigslist.org/que/bar/d/cdl-motorcycl-driving-permit/6453072963.html
+CDL MOTORCYCL DRIVING PERMIT EXAM GURANTEE PASSING CALL ME NOW
+https://newyork.craigslist.org/que/bar/d/cdl-motorcycl-driving-permit/6453072963.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/muhammad-ali-magazines-trade/6471829769.html
+Muhammad Ali magazines trade for 1 Morgan silver dollar
+https://newyork.craigslist.org/lgi/bar/d/muhammad-ali-magazines-trade/6471829769.html
+None
+#
+
+
+https://newyork.craigslist.org/brx/bar/d/1968-bsa-shooting-star-b441/6477490261.html
+1968 bsa shooting star b441 Trades
+https://newyork.craigslist.org/brx/bar/d/1968-bsa-shooting-star-b441/6477490261.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/louis-vuitton-vvv-exhibition/6459483064.html
+Louis Vuitton VVV exhibition pin-- TRADE
+https://newyork.craigslist.org/mnh/bar/d/louis-vuitton-vvv-exhibition/6459483064.html
+None
+#
+
+
+https://newyork.craigslist.org/mnh/bar/d/jack-of-all-trades-20-yrs-exp/6462090842.html
+Jack Of All Trades-20 Yrs. Exp. / Live In, Perm. Or Temp.
+https://newyork.craigslist.org/mnh/bar/d/jack-of-all-trades-20-yrs-exp/6462090842.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/labor-4room/6461803496.html
+Labor 4room
+https://newyork.craigslist.org/mnh/bar/d/labor-4room/6461803496.html
+None
+#
+
+
+https://newyork.craigslist.org/mnh/bar/d/manhues-guest-room-accom-for/6475002778.html
+**MANH.UES. Guest Room accom - for Computer help
+https://newyork.craigslist.org/mnh/bar/d/manhues-guest-room-accom-for/6475002778.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6465173018.html
+The Home Improvement guy- Let's do it, what do you have to trade
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6465173018.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/mercedes-benz-c280-amg-mods/6477392342.html
+mercedes benz c280 amg mods/lowered runs/drives
+https://newyork.craigslist.org/lgi/bar/d/mercedes-benz-c280-amg-mods/6477392342.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6466804373.html
+The Home Improvement guy- Let's do it, what do you have to trade
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6466804373.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6466804712.html
+The Home Improvement guy- Let's do it, what do you have to trade
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6466804712.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6466803427.html
+The Home Improvement guy- Let's do it, what do you have to trade
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6466803427.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/harley-davidson-1200-custom/6477378624.html
+Harley Davidson 1200 Custom  drag bars Tac forward controls trade for
+https://newyork.craigslist.org/lgi/bar/d/harley-davidson-1200-custom/6477378624.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/free-room-board-in-exchange/6477369749.html
+FREE ROOM & BOARD IN EXCHANGE FOR HOUSEHOLD CHORES
+https://newyork.craigslist.org/brk/bar/d/free-room-board-in-exchange/6477369749.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/apartment-needed-for-1-2/6461504260.html
+Apartment Needed for 1-2 weeks ASAP!!
+https://newyork.craigslist.org/mnh/bar/d/apartment-needed-for-1-2/6461504260.html
+None
+#
+
+
+https://newyork.craigslist.org/brx/bar/d/wheels-with-tires-need-gone/6461278026.html
+WHEELS WITH TIRES NEED GONE
+https://newyork.craigslist.org/brx/bar/d/wheels-with-tires-need-gone/6461278026.html
+None
+#
+
+
+https://newyork.craigslist.org/brx/bar/d/chevy-avalanche-z71/6461277396.html
+CHEVY AVALANCHE Z71
+https://newyork.craigslist.org/brx/bar/d/chevy-avalanche-z71/6461277396.html
+None
+#
+
+
+https://newyork.craigslist.org/brx/bar/d/1988-jeep-wrangler/6470233766.html
+1988 JEEP WRANGLER
+https://newyork.craigslist.org/brx/bar/d/1988-jeep-wrangler/6470233766.html
+None
+#
+
+
+https://newyork.craigslist.org/brx/bar/d/1988-jeep-wrangler/6449990359.html
+1988 JEEP WRANGLER
+https://newyork.craigslist.org/brx/bar/d/1988-jeep-wrangler/6449990359.html
+None
+#
+
+
+https://newyork.craigslist.org/brx/bar/d/1988-jeep-wrangler/6472864474.html
+1988 JEEP WRANGLER
+https://newyork.craigslist.org/brx/bar/d/1988-jeep-wrangler/6472864474.html
+None
+#
+
+
+https://newyork.craigslist.org/wch/bar/d/sports-collectibles-baseball/6447388507.html
+Sports Collectibles, Baseball Cards Stamp & Coin Collection
+https://newyork.craigslist.org/wch/bar/d/sports-collectibles-baseball/6447388507.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/licensed-private-eye/6465352034.html
+Licensed Private eye investigator for cheaters
+https://newyork.craigslist.org/mnh/bar/d/licensed-private-eye/6465352034.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/massage-for-women/6463851032.html
+Massage for Women
+https://newyork.craigslist.org/mnh/bar/d/massage-for-women/6463851032.html
+None
+#
+
+
+https://newyork.craigslist.org/que/bar/d/1995-mercedes-benz-trade/6461714032.html
+1995 Mercedes-benz $  trade
+https://newyork.craigslist.org/que/bar/d/1995-mercedes-benz-trade/6461714032.html
+None
+#
+None
+https://newyork.craigslist.org/que/bar/d/1995-mercedes-benz-trade/6471199069.html
+1995 Mercedes-benz $  trade
+https://newyork.craigslist.org/que/bar/d/1995-mercedes-benz-trade/6471199069.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/2006-sportbike-yamaha-fz6-low/6459074049.html
+2006  sportbike yamaha fz6 low miles
+https://newyork.craigslist.org/brk/bar/d/2006-sportbike-yamaha-fz6-low/6459074049.html
+None
+#
+
+
+https://newyork.craigslist.org/brx/bar/d/monitor/6454435354.html
+MONITOR
+https://newyork.craigslist.org/brx/bar/d/monitor/6454435354.html
+None
+#
+
+
+https://newyork.craigslist.org/mnh/bar/d/self-defense-martial-arts-or/6448732182.html
+Self-Defense/Martial Arts or Personal Trainer
+https://newyork.craigslist.org/mnh/bar/d/self-defense-martial-arts-or/6448732182.html
+None
+#
+
+
+https://newyork.craigslist.org/wch/bar/d/ski-boots-salomon-size-24/6477064217.html
+Ski boots Salomon, size 24
+https://newyork.craigslist.org/wch/bar/d/ski-boots-salomon-size-24/6477064217.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/nice-male-licensed-massage/6476993094.html
+Nice Male Licensed Massage Therapist Seeks Legit Trade
+https://newyork.craigslist.org/mnh/bar/d/nice-male-licensed-massage/6476993094.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/icloud/6464516569.html
+ICLOUD
+https://newyork.craigslist.org/brk/bar/d/icloud/6464516569.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/icloud/6467320134.html
+ICLOUD
+https://newyork.craigslist.org/brk/bar/d/icloud/6467320134.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/icloud/6467320024.html
+ICLOUD
+https://newyork.craigslist.org/brk/bar/d/icloud/6467320024.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/icloud/6470838722.html
+ICLOUD
+https://newyork.craigslist.org/brk/bar/d/icloud/6470838722.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/icloud/6474743739.html
+ICLOUD
+https://newyork.craigslist.org/brk/bar/d/icloud/6474743739.html
+None
+#
+
+
+https://newyork.craigslist.org/fct/bar/d/1957-chevy-150-handy-man/6463242163.html
+1957 Chevy 150 Handy Man Station Wagon
+https://newyork.craigslist.org/fct/bar/d/1957-chevy-150-handy-man/6463242163.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/trade-auto-repairs-for-what/6461552706.html
+Trade Auto Repairs for ( What do you have? )
+https://newyork.craigslist.org/lgi/bar/d/trade-auto-repairs-for-what/6461552706.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/professional-photographer/6445499305.html
+Professional Photographer - Amateur Woodworker
+https://newyork.craigslist.org/mnh/bar/d/professional-photographer/6445499305.html
+None
+#
+
+
+https://newyork.craigslist.org/mnh/bar/d/you-seek-excellent-cat-house/6455678718.html
+*You Seek Excellent CAT HOUSE Care I Seek a Peaceful WRITING Retreat
+https://newyork.craigslist.org/mnh/bar/d/you-seek-excellent-cat-house/6455678718.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6465172595.html
+The Home Improvement guy- Let's do it, what do you have to trade
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6465172595.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6469909878.html
+The Home Improvement guy- Let's do it, what do you have to trade
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6469909878.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6469909474.html
+The Home Improvement guy- Let's do it, what do you have to trade
+https://newyork.craigslist.org/brk/bar/d/the-home-improvement-guy-lets/6469909474.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6476893647.html
+tree work for barter/need tile work,floor sander and gutters
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6476893647.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/fashion-photographer-for/6459983676.html
+fashion Photographer for jujutsu lesson
+https://newyork.craigslist.org/mnh/bar/d/fashion-photographer-for/6459983676.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/roll-off-dumpster-rentals-10/6476879343.html
+Roll Off Dumpster Rentals- 10 to 40 yd Containers
+https://newyork.craigslist.org/lgi/bar/d/roll-off-dumpster-rentals-10/6476879343.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6476893867.html
+tree work for barter/need tile work,floor sander and gutters
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6476893867.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6469700194.html
+tree work for barter/need tile work,floor sander and gutters
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6469700194.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6469703607.html
+tree work for barter/need tile work,floor sander and gutters
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6469703607.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6469701489.html
+tree work for barter/need tile work,floor sander and gutters
+https://newyork.craigslist.org/lgi/bar/d/tree-work-for-barter-need/6469701489.html
+None
+#
+
+
+https://newyork.craigslist.org/mnh/bar/d/3-adeco-bentwood-mid-back/6467549559.html
+3 Adeco Bentwood Mid-Back Desk Chairs For Tools - Free delivery!
+https://newyork.craigslist.org/mnh/bar/d/3-adeco-bentwood-mid-back/6467549559.html
+None
+#
+None
+https://newyork.craigslist.org/que/bar/d/can-offer-welding-or-clean-up/6473394555.html
+I can offer welding or clean up
+https://newyork.craigslist.org/que/bar/d/can-offer-welding-or-clean-up/6473394555.html
+None
+#
+None
+https://newyork.craigslist.org/que/bar/d/welding-for-trash-removal/6473892999.html
+Welding for  Trash removal
+https://newyork.craigslist.org/que/bar/d/welding-for-trash-removal/6473892999.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/my-midtown-studio-apartment/6476850129.html
+My midtown studio apartment for........
+https://newyork.craigslist.org/mnh/bar/d/my-midtown-studio-apartment/6476850129.html
+None
+#
+
+
+https://newyork.craigslist.org/lgi/bar/d/harley-davidson-1200-custom/6476844364.html
+Harley Davidson 1200 Custom  drag bars Tac forward controls trade for
+https://newyork.craigslist.org/lgi/bar/d/harley-davidson-1200-custom/6476844364.html
+None
+#
+
+
+https://newyork.craigslist.org/wch/bar/d/49-28-custom-granite/6461500667.html
+49" x 28" custom granite countertop
+https://newyork.craigslist.org/wch/bar/d/49-28-custom-granite/6461500667.html
+None
+#
+None
+https://newyork.craigslist.org/brk/bar/d/custom-marble-slate-iron-wine/6461492733.html
+custom marble slate & iron wine bar - holds 24 bottles
+https://newyork.craigslist.org/brk/bar/d/custom-marble-slate-iron-wine/6461492733.html
+None
+#
+
+
+https://newyork.craigslist.org/stn/bar/d/brand-new-yellow-rubber/6476830692.html
+BRAND NEW  YELLOW RUBBER WATERPROOF WORK BOOTS SIZE 15
+https://newyork.craigslist.org/stn/bar/d/brand-new-yellow-rubber/6476830692.html
+None
+#
+None
+https://newyork.craigslist.org/wch/bar/d/day-labor-in-exchange-for/6473570506.html
+Day Labor in Exchange for Goods and Electronics
+https://newyork.craigslist.org/wch/bar/d/day-labor-in-exchange-for/6473570506.html
+None
+#
+
+
+https://newyork.craigslist.org/wch/bar/d/fine-art-by-scribz-the/6473571774.html
+Fine Art By Scribz The Peasant FOr Trades (Old Electronics Etc)
+https://newyork.craigslist.org/wch/bar/d/fine-art-by-scribz-the/6473571774.html
+None
+#
+
+
+https://newyork.craigslist.org/wch/bar/d/fine-art-by-scribz-the/6473576321.html
+Fine Art By Scribz The Peasant FOr Trades (Old Electronics Etc)
+https://newyork.craigslist.org/wch/bar/d/fine-art-by-scribz-the/6473576321.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/fine-art-raw-new-and-intense/6473577185.html
+Fine art, Raw, New and Intense
+https://newyork.craigslist.org/brk/bar/d/fine-art-raw-new-and-intense/6473577185.html
+None
+#
+None
+https://newyork.craigslist.org/que/bar/d/1999-gsxr/6476781245.html
+1999 GSXR
+https://newyork.craigslist.org/que/bar/d/1999-gsxr/6476781245.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/for-sale-playboy-magazines/6476781035.html
+For Sale Playboy Magazines, New, Sealed
+https://newyork.craigslist.org/mnh/bar/d/for-sale-playboy-magazines/6476781035.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/for-sale-playboy-magazines/6473656014.html
+For Sale Playboy Magazines, New, Sealed
+https://newyork.craigslist.org/mnh/bar/d/for-sale-playboy-magazines/6473656014.html
+None
+#
+
+
+https://newyork.craigslist.org/brk/bar/d/toy-model-road-bicycle-diy/6476780218.html
+Toy Model Road Bicycle DIY, cyclist present
+https://newyork.craigslist.org/brk/bar/d/toy-model-road-bicycle-diy/6476780218.html
+None
+#
+
+
+https://newyork.craigslist.org/fct/bar/d/fs-ft-2010-ducati-superbike/6450927391.html
+FS/FT: 2010 Ducati Superbike 848 Motor
+https://newyork.craigslist.org/fct/bar/d/fs-ft-2010-ducati-superbike/6450927391.html
+None
+#
+
+
+https://newyork.craigslist.org/fct/bar/d/2010-ducati-848-engine/6450932964.html
+2010 Ducati 848 Engine
+https://newyork.craigslist.org/fct/bar/d/2010-ducati-848-engine/6450932964.html
+None
+#
+None
+https://newyork.craigslist.org/mnh/bar/d/tax-return-preparation/6470762263.html
+Tax Return Preparation
+https://newyork.craigslist.org/mnh/bar/d/tax-return-preparation/6470762263.html
+None
+#
+
+
+https://newyork.craigslist.org/stn/bar/d/cable-tv-coaxil-cable-rg6u/6454349818.html
+CABLE T.V. COAXIL CABLE RG6U 1000 FT   ROLL
+https://newyork.craigslist.org/stn/bar/d/cable-tv-coaxil-cable-rg6u/6454349818.html
+None
+#
+
+
+https://newyork.craigslist.org/stn/bar/d/brand-new-yellow-rubber/6463850844.html
+BRAND NEW  YELLOW RUBBER WATERPROOF WORK BOOTS SIZE 15
+https://newyork.craigslist.org/stn/bar/d/brand-new-yellow-rubber/6463850844.html
+None
+#
+
+
+https://newyork.craigslist.org/stn/bar/d/1998-starting-lineup-alex/6454422824.html
+1998 Starting Lineup ALEX RODRIGUEZ SLU  FREEZE  FRAME
+https://newyork.craigslist.org/stn/bar/d/1998-starting-lineup-alex/6454422824.html
+None
+#
+
+
+https://newyork.craigslist.org/stn/bar/d/1954-milton-bradley-uncle/6454423100.html
+1954 MILTON BRADLEY UNCLE WIGGILY GAME
+https://newyork.craigslist.org/stn/bar/d/1954-milton-bradley-uncle/6454423100.html
+None
+#
+
+
+https://newyork.craigslist.org/mnh/bar/d/homedics-ultrasonic/6476717262.html
