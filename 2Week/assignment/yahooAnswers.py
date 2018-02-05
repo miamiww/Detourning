@@ -35,7 +35,7 @@ time.sleep(1)
 
 elem = browser.find_element_by_tag_name("body")
 
-no_of_pagedowns = 300
+no_of_pagedowns = 500
 
 while no_of_pagedowns:
     elem.send_keys(Keys.PAGE_DOWN)
