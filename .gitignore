@@ -1,4 +1,8 @@
 venv
 .DS_Store
-Questions.aiff
-Questions_01.mp3
+*.aiff
+*.mp3
+*.sesx
+*.wav
+*.pkf
+*.jpg
