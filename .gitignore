@@ -6,3 +6,5 @@ venv
 *.wav
 *.pkf
 *.jpg
+*.png
+*.gif
