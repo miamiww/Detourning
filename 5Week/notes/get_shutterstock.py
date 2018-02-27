@@ -44,12 +44,12 @@ def get_shutterstock_images(q):
     soup = BeautifulSoup(html, 'html.parser')
     images = soup.select('.img-wrap img')
 
-    for image in images[0:2]:#images:
+    for image in images[0:10]:#images:
         img_url = 'https:' + image.get('src')
         # print image.get('src')
         title = image.get('alt')
         print img_url
         filename = DownloadFile(img_url)
-        write_text(filename, title)
+        write_text(filename, 'gimme da gorbage')
 
-get_shutterstock_images('baby crying')
+get_shutterstock_images('cats')
