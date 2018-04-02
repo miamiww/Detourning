@@ -10,7 +10,7 @@ url = "https://smittenkitchen.com/?random"
 def get_url():
     html = requests.get(url).text
     soup = BeautifulSoup(html, 'html.parser')
-    title = soup.title.string
+    title = soup.select('h1.entry-title')[0].text
     ref_url = soup.select('h1.entry-title')[0].a['href']
     return title + '\n' + ref_url
 
