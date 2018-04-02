@@ -11,3 +11,5 @@ venv
 *.mp4
 videos
 *.part
+creds.json
+detourning-the-web-2018/

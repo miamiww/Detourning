@@ -1,0 +1,3 @@
+cd /Users/aljones/ITP/Year1/Semester2/Detourning/8Week
+source venv/bin/activate
+python sendquestion.py
