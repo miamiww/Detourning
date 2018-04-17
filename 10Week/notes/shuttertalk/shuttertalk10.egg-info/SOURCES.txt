@@ -1,0 +1,8 @@
+setup.py
+bin/shuttertalk
+shuttertalk/__init__.py
+shuttertalk10.egg-info/PKG-INFO
+shuttertalk10.egg-info/SOURCES.txt
+shuttertalk10.egg-info/dependency_links.txt
+shuttertalk10.egg-info/requires.txt
+shuttertalk10.egg-info/top_level.txt
