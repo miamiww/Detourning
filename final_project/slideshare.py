@@ -6,7 +6,7 @@ import subprocess
 import operator
 import json
 
-with open('credentials.json', 'r') as infile:
+with open('creds.json', 'r') as infile:
     creds = json.load(infile)
 
 driver = webdriver.Chrome()
