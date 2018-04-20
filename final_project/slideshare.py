@@ -1,17 +1,34 @@
+## import google api modules
+from __future__ import print_function
+from apiclient.discovery import build
+from httplib2 import Http
+from oauth2client import file, client, tools
+# scraping modules
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import random
 import time
 import subprocess
 import operator
+
+# import google slides credentials
 import json
 
 with open('creds.json', 'r') as infile:
     creds = json.load(infile)
 
-driver = webdriver.Chrome()
+options = webdriver.ChromeOptions()
+options.add_argument("--start-maximized")
+driver = webdriver.Chrome(chrome_options=options)
+print(driver.get_window_size())
+driver.set_window_size(1440,900)
+print(driver.get_window_size())
 # driver.get('https://slideshare.net')
 # driver.execute_script('''document.querySelector('#nav-search-query').value='AI';''')
+
+## the two driver functions, slidepull and login
+# slidepull downloads popular slides from slideshare
+# login logs into google slides and opens up a blank slidedeck, returning the slidedeck ID
 
 def slidepull(iteration):
     iter = str(iteration)
@@ -46,27 +63,13 @@ def slidepull(iteration):
                 pass
 
         slide_url = slide.get_attribute('data-full')
+        # subprocess.call(["wget",slide_url,"-O","slides/slide"+iter+".jpg"])
         return(slide_url)
     except Exception as e:
         # print(e)
         pass
 
 
-
-
-    #     subprocess.call(["wget",slide_url,"-O","slides/slide"+iter+".jpg"])
-
-
-slide_urls = []
-
-# for i in range(0,2):
-#     the_slide = slidepull(i)
-#     print(the_slide)
-#     if the_slide == None:
-#         pass
-#     else:
-#         slide_urls.append(the_slide)
-#     print(slide_urls)
 
 def login():
     driver.get('https://docs.google.com/presentation/')
@@ -83,7 +86,134 @@ def login():
     project_id = driver.current_url.split('/')[5]
     return project_id
 
+
+
+
+
+
+## driver behavior
+
+#scraping
+slide_urls = []
+
+for i in range(0,10):
+    the_slide = slidepull(i)
+    print(the_slide)
+    if the_slide == None:
+        pass
+    else:
+        slide_urls.append(the_slide)
+    print(slide_urls)
+
 login()
+
+project_id = driver.current_url.split('/')[5]
+first_slide_id = driver.current_url.split('/')[6].split('.')[1]
+
+## Setup the Slides API
+SCOPES = 'https://www.googleapis.com/auth/presentations'
+store = file.Storage('credentials.json')
+creds = store.get()
+if not creds or creds.invalid:
+    flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
+    creds = tools.run_flow(flow, store)
+service = build('slides', 'v1', http=creds.authorize(Http()))
+
+# login to google slides and call the Slides API
+PRESENTATION_ID = project_id
+presentation = service.presentations().get(presentationId=PRESENTATION_ID).execute()
+slides = presentation.get('slides')
+title_id = slides[0].get('pageElements')[0]['objectId']
+subtitle_id = slides[0].get('pageElements')[1]['objectId']
+
+def deck_populate(slide_ID, iteration):
+    requests = [
+        {
+            'createSlide': {
+                'objectId': slide_ID,
+                'insertionIndex': '1'
+            }
+        }
+    ]
+
+    body = {
+        'requests': requests
+    }
+
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
+    create_slide_response = response.get('replies')[0].get('createSlide')
+    print('Created slide with ID: {0}'.format(create_slide_response.get('objectId')))
+
+    requests = [
+        {
+            "updatePageProperties": {
+                "objectId": slide_ID,
+                "pageProperties": {
+                    "pageBackgroundFill": {
+                        "stretchedPictureFill": {
+                        "contentUrl": slide_urls[len(slide_urls)-1-iteration]
+                        }
+                    }
+                },
+                "fields": "pageBackgroundFill"
+            }
+        }
+    ]
+
+    body = {
+        'requests': requests
+    }
+
+
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
+
+for i in range(0, len(slide_urls)):
+    unique_id = random.randint(1000,10000000000000000000000)
+    unique_id = str(unique_id)
+    deck_populate(unique_id,i)
+
+
+def change_title():
+    requests = [
+        {
+            "insertText": {
+                "objectId": title_id,
+                "text": "WELCOME TO",
+                "insertionIndex": 0
+            }
+        }
+     ]
+
+    body = {
+            'requests': requests
+    }
+
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
+
+    time.sleep(4)
+    requests = [
+        {
+            "insertText": {
+                "objectId": subtitle_id,
+                "text": "GOOD CONFERENCE TALK",
+                "insertionIndex": 0
+            }
+        }
+     ]
+
+    body = {
+            'requests': requests
+    }
+
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
+
+change_title()
+time.sleep(1)
+driver.find_element_by_css_selector("#punch-start-presentation-left").click()
 
 
 # driver.quit()

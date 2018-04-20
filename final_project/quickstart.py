@@ -17,56 +17,78 @@ if not creds or creds.invalid:
 service = build('slides', 'v1', http=creds.authorize(Http()))
 
 # Call the Slides API
-PRESENTATION_ID = '1dirjLzgSfrIBVJbGFrh-d7ehgldGw3HV3E7CjB0D8rs'
+PRESENTATION_ID = '1-aNwRvnFwxOLD8kvCxbzxVyICTrvK0R0ED-0SAZ7H7s'
 presentation = service.presentations().get(presentationId=PRESENTATION_ID).execute()
 slides = presentation.get('slides')
+title_id = slides[0].get('pageElements')[0]['objectId']
+subtitle_id = slides[0].get('pageElements')[1]['objectId']
+print(title_id)
+print(subtitle_id)
+
+def change_title():
+    requests = [
+        {
+            "insertText": {
+                "objectId": title_id,
+                "text": "Good Talk",
+                "insertionIndex": 0
+            }
+        }
+     ]
+
+    body = {
+            'requests': requests
+    }
+
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
+change_title()
+
+
 
 print ('The presentation contains {} slides:'.format(len(slides)))
 for i, slide in enumerate(slides):
     print('- Slide #{} contains {} elements.'.format(i + 1,
                                                      len(slide.get('pageElements'))))
-
-requests = [
-    {
-        'createSlide': {
-            'objectId': '3424234234230904317031275981435-4841-',
-            'insertionIndex': '1'
-        }
-    }
-]
-
-body = {
-    'requests': requests
-}
-
-response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
-                                                      body=body).execute()
-create_slide_response = response.get('replies')[0].get('createSlide')
-print('Created slide with ID: {0}'.format(create_slide_response.get('objectId')))
-
-requests = [
-    {
-        "updatePageProperties": {
-            "objectId": '3424234234230904317031275981435-4841-',
-            "pageProperties": {
-                "pageBackgroundFill": {
-                    "stretchedPictureFill": {
-                    "contentUrl": 'https://image.slidesharecdn.com/webinarhowtoscaleadreamsalesteam-160210174334/95/webinar-how-to-scale-a-dream-sales-team-4-1024.jpg?cb=1455214873'
-                    }
-                }
-            },
-            "fields": "pageBackgroundFill"
-        }
-    }
-]
-
-body = {
-    'requests': requests
-}
-
-body = {
-    'requests': requests
-}
-
-response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
-                                                      body=body).execute()
+#
+# requests = [
+#     {
+#         'createSlide': {
+#             'objectId': '3424234234230904317031275981435-4841-',
+#             'insertionIndex': '1'
+#         }
+#     }
+# ]
+#
+# body = {
+#     'requests': requests
+# }
+#
+# response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+#                                                       body=body).execute()
+# create_slide_response = response.get('replies')[0].get('createSlide')
+# print('Created slide with ID: {0}'.format(create_slide_response.get('objectId')))
+#
+# requests = [
+#     {
+#         "updatePageProperties": {
+#             "objectId": '3424234234230904317031275981435-4841-',
+#             "pageProperties": {
+#                 "pageBackgroundFill": {
+#                     "stretchedPictureFill": {
+#                     "contentUrl": 'https://image.slidesharecdn.com/webinarhowtoscaleadreamsalesteam-160210174334/95/webinar-how-to-scale-a-dream-sales-team-4-1024.jpg?cb=1455214873'
+#                     }
+#                 }
+#             },
+#             "fields": "pageBackgroundFill"
+#         }
+#     }
+# ]
+#
+# body = {
+#     'requests': requests
+# }
+#
+#
+# response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+#                                                       body=body).execute()
