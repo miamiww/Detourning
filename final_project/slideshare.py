@@ -18,17 +18,21 @@ with open('creds.json', 'r') as infile:
     creds = json.load(infile)
 
 options = webdriver.ChromeOptions()
-options.add_argument("--start-maximized")
-driver = webdriver.Chrome(chrome_options=options)
-print(driver.get_window_size())
-driver.set_window_size(1440,900)
-print(driver.get_window_size())
+options.add_argument("--start-fullscreen")
+# print(driver.get_window_size())
+# driver.max_window_size()
+# print(driver.get_window_size())
 # driver.get('https://slideshare.net')
 # driver.execute_script('''document.querySelector('#nav-search-query').value='AI';''')
+
+music_driver = webdriver.Chrome()
+driver = webdriver.Chrome(chrome_options=options)
+music_driver.get('https://www.youtube.com/watch?v=xeEKETt9MTU')
 
 ## the two driver functions, slidepull and login
 # slidepull downloads popular slides from slideshare
 # login logs into google slides and opens up a blank slidedeck, returning the slidedeck ID
+
 
 def slidepull(iteration):
     iter = str(iteration)
@@ -211,10 +215,26 @@ def change_title():
     response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
                                                           body=body).execute()
 
+
 change_title()
 time.sleep(1)
-driver.find_element_by_css_selector("#punch-start-presentation-left").click()
 
+driver.find_element_by_css_selector("#punch-start-presentation-left").click()
+# music_driver.execute_script('''document.getElementsByTagName('video')[0].volume=0.1 ;''')
+
+volume_down = """
+return (function(v) {
+document.getElementsByTagName('video')[0].volume=v;
+})(arguments[0]);
+"""
+
+for i in range(0,10):
+    vol = 1-i/10
+    time.sleep(.6)
+    music_driver.execute_script(volume_down,vol)
+
+time.sleep(3)
+music_driver.quit()
 
 # driver.quit()
 
