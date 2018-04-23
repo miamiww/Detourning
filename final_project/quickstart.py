@@ -17,11 +17,13 @@ if not creds or creds.invalid:
 service = build('slides', 'v1', http=creds.authorize(Http()))
 
 # Call the Slides API
-PRESENTATION_ID = '1-aNwRvnFwxOLD8kvCxbzxVyICTrvK0R0ED-0SAZ7H7s'
+PRESENTATION_ID = '1bcr-RgvcX_nwsMMzUtvdwIvyxXL1wF-69jT01XlpTsk'
 presentation = service.presentations().get(presentationId=PRESENTATION_ID).execute()
 slides = presentation.get('slides')
 title_id = slides[0].get('pageElements')[0]['objectId']
 subtitle_id = slides[0].get('pageElements')[1]['objectId']
+print(slides[1].get('slideProperties')['notesPage']['notesProperties']['speakerNotesObjectId'])
+# ['speakerNotesObjectId']
 print(title_id)
 print(subtitle_id)
 
@@ -42,9 +44,27 @@ def change_title():
 
     response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
                                                           body=body).execute()
-change_title()
+# change_title()
+
+notes_id = slides[1].get('slideProperties')['notesPage']['notesProperties']['speakerNotesObjectId']
+
+def notes_update(slide_notes_id):
+    requests = [
+        {
+            "insertText": {
+                "objectId": slide_notes_id,
+                "text": "hi"}
+        }
+     ]
+
+    body = {
+            'requests': requests
+    }
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
 
 
+notes_update(notes_id)
 
 print ('The presentation contains {} slides:'.format(len(slides)))
 for i, slide in enumerate(slides):

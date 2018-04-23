@@ -10,8 +10,17 @@ import random
 import time
 import subprocess
 import operator
+# image to text modules
+import io
+import requests
+import pytesseract
+from PIL import Image
+# import the custom markov chain model and corpus
+import custom_markov as cmarkov
+total_daesien = open('text_corpuses/totaldeasiean.txt', encoding='utf8').read()
+corpus = total_daesien.split()
 
-# import google slides credentials
+# import google slides login
 import json
 
 with open('creds.json', 'r') as infile:
@@ -39,11 +48,16 @@ def slidepull(iteration):
     driver.get('https://slideshare.net/explore')
     topics = driver.find_elements_by_css_selector(".title-link")
     random.choice(topics).click()
-    time.sleep(1)
+    time.sleep(.5)
 
     decks = driver.find_elements_by_css_selector(".link-bg-img")
     random.choice(decks).click()
-    time.sleep(1)
+    time.sleep(.5)
+    try:
+        driver.find_element_by_css_selector('.fa-caret-down').click()
+    except:
+        pass
+
 
     try:
         if iteration == 0:
@@ -60,15 +74,19 @@ def slidepull(iteration):
             slide = slides[top_clip_position]
             try:
                 for i in range(0, top_clip_position):
-                    time.sleep(.3)
+                    time.sleep(.1)
                     driver.find_element_by_css_selector(".j-next-btn").click()
             except Exception as e:
                 # print(e)
                 pass
 
         slide_url = slide.get_attribute('data-full')
+        description = driver.find_element_by_css_selector('#slideshow-description-paragraph').text
         # subprocess.call(["wget",slide_url,"-O","slides/slide"+iter+".jpg"])
-        return(slide_url)
+        slide_info = []
+        slide_info.append(slide_url)
+        slide_info.append(description)
+        return(slide_info)
     except Exception as e:
         # print(e)
         pass
@@ -91,7 +109,11 @@ def login():
     return project_id
 
 
-
+def text_read(slide_location):
+    response = requests.get(slide_location)
+    img = Image.open(io.BytesIO(response.content))
+    text = pytesseract.image_to_string(img)
+    return(text)
 
 
 
@@ -99,15 +121,29 @@ def login():
 
 #scraping
 slide_urls = []
+slides_content = []
 
-for i in range(0,10):
+for i in range(0,5):
     the_slide = slidepull(i)
     print(the_slide)
     if the_slide == None:
         pass
     else:
-        slide_urls.append(the_slide)
-    print(slide_urls)
+        the_slide_url = the_slide[0]
+        the_slide_description = the_slide[1]
+        slide_urls.append(the_slide_url)
+        slides_content.append(the_slide_description)
+        corpus.extend(the_slide_description.split())
+        # slide_text = text_read(the_slide)
+        # print(slide_text)
+        # slides_content.append(slide_text)
+        # corpus.extend(slide_text.split())
+
+speaker_notes = []
+for i in range(len(slides_content)):
+    slide_notes = cmarkov.one_word_markov_slide_seed(corpus,30," ".join(slides_content[i].split()[:6]))
+    print(slide_notes)
+    speaker_notes.append(slide_notes)
 
 login()
 
@@ -130,6 +166,7 @@ slides = presentation.get('slides')
 title_id = slides[0].get('pageElements')[0]['objectId']
 subtitle_id = slides[0].get('pageElements')[1]['objectId']
 
+#functions for calling on the api
 def deck_populate(slide_ID, iteration):
     requests = [
         {
@@ -173,12 +210,6 @@ def deck_populate(slide_ID, iteration):
     response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
                                                           body=body).execute()
 
-for i in range(0, len(slide_urls)):
-    unique_id = random.randint(1000,10000000000000000000000)
-    unique_id = str(unique_id)
-    deck_populate(unique_id,i)
-
-
 def change_title():
     requests = [
         {
@@ -215,9 +246,37 @@ def change_title():
     response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
                                                           body=body).execute()
 
+def notes_update(slide_notes_id, iteration):
+    requests = [
+        {
+            "insertText": {
+                "objectId": slide_notes_id,
+                "text": slides_content[iteration-1]}
+        }
+     ]
+
+    body = {
+            'requests': requests
+    }
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
+
+
+
+for i in range(0, len(slide_urls)):
+    unique_id = random.randint(1000,10000000000000000000000)
+    unique_id = str(unique_id)
+    deck_populate(unique_id,i)
+
+
+slides = presentation.get('slides')
+for i in range(1, len(slides) + 1):
+    notes_id = slides[i].get('slideProperties')['notesPage']['notesProperties']['speakerNotesObjectId']
+    notes_update(notes_id, i)
 
 change_title()
 time.sleep(1)
+
 
 driver.find_element_by_css_selector("#punch-start-presentation-left").click()
 # music_driver.execute_script('''document.getElementsByTagName('video')[0].volume=0.1 ;''')
@@ -235,6 +294,7 @@ for i in range(0,10):
 
 time.sleep(3)
 music_driver.quit()
+
 
 # driver.quit()
 

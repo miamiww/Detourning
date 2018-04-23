@@ -2,9 +2,14 @@ import io
 import requests
 import pytesseract
 from PIL import Image
-response = requests.get("https://image.slidesharecdn.com/the-cx-paradox-3-ways-measuring-your-customer-satisfaction-could-actually-damage-it-151104184431-lva1-app6891/95/the-cx-paradox-3-ways-measuring-your-customer-satisfaction-could-actually-damage-it-5-1024.jpg?cb=1446750215")
-# print( type(response) ) # <class 'requests.models.Response'>
+response = requests.get("https://image.slidesharecdn.com/forslideshare-160301153508/95/can-we-assess-creativity-1-1024.jpg?cb=1456850231")
 img = Image.open(io.BytesIO(response.content))
-# print( type(img) ) # <class 'PIL.JpegImagePlugin.JpegImageFile'>
 text = pytesseract.image_to_string(img)
-print( text )
+print(text)
+
+
+def text_read(slide_location):
+    response = requests.get(slide_location)
+    img = Image.open(io.BytesIO(response.content))
+    text = pytesseract.image_to_string(img)
+    return(text)
