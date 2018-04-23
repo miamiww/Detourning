@@ -19,6 +19,9 @@ from PIL import Image
 import custom_markov as cmarkov
 total_daesien = open('text_corpuses/totaldeasiean.txt', encoding='utf8').read()
 corpus = total_daesien.split()
+# import reaction modules
+from reactionrnn import reactionrnn
+react = reactionrnn()
 
 # import google slides login
 import json
@@ -109,21 +112,47 @@ def login():
     return project_id
 
 
+# little functions
+
 def text_read(slide_location):
     response = requests.get(slide_location)
     img = Image.open(io.BytesIO(response.content))
     text = pytesseract.image_to_string(img)
     return(text)
 
+# reaction_possibilities = ['love','angry','sad','haha']
+love_reacts = ['lean forward in your seats and murmur approvingly','sit on the edge of your seat. nod. this is the best talk you have ever been to']
+angry_reacts = ['that does not seem right. furrow your brows in consternation', 'the speaker has to be wrong about this. sit up and glower']
+sad_reacts = ['uh oh, you would rather not be thinking about this right now. your phone gets heavy in your pocket. take it out and check it']
+haha_reacts = ['wow that was funny. laugh','laugh, let out a few woops', 'chuckle approvingly']
+wow_reacts = ['your mind has just been blown. clap enthusiastically', 'wow. incredible. raise your eyebrows','that cannot be right. that is amazing. shuffle in your seat']
+# the_reactions = [love_reacts,angry_reacts,sad_reacts,haha_reacts]
 
+reaction_possibilities = {
+    'love':love_reacts,
+    'angry':angry_reacts,
+    'sad':sad_reacts,
+    'haha':haha_reacts,
+    'wow':wow_reacts
+}
 
+def get_reaction(statement):
+    reaction = react.predict(statement)
+    likely_reaction = max(reaction.items(), key=operator.itemgetter(1))[0]
+    the_reaction = random.choice(reaction_possibilities[likely_reaction])
+    # for i in len(reaction_possibilities):
+    #     if likely_reaction == reaction_possibilities[i]:
+    #         the_reaction = random.choice(the_reactions[i])
+    #     else:
+    #         pass
+    return(the_reaction)
 ## driver behavior
 
 #scraping
 slide_urls = []
 slides_content = []
 
-for i in range(0,5):
+for i in range(0,16):
     the_slide = slidepull(i)
     print(the_slide)
     if the_slide == None:
@@ -141,7 +170,9 @@ for i in range(0,5):
 
 speaker_notes = []
 for i in range(len(slides_content)):
-    slide_notes = cmarkov.one_word_markov_slide_seed(corpus,30," ".join(slides_content[i].split()[:6]))
+    slide_notes = cmarkov.one_word_markov_slide_seed(corpus,40," ".join(slides_content[i].split()[:7]))
+    print(slide_notes)
+    slide_notes = slide_notes + '\n\n' + get_reaction(slide_notes)
     print(slide_notes)
     speaker_notes.append(slide_notes)
 
@@ -161,10 +192,7 @@ service = build('slides', 'v1', http=creds.authorize(Http()))
 
 # login to google slides and call the Slides API
 PRESENTATION_ID = project_id
-presentation = service.presentations().get(presentationId=PRESENTATION_ID).execute()
-slides = presentation.get('slides')
-title_id = slides[0].get('pageElements')[0]['objectId']
-subtitle_id = slides[0].get('pageElements')[1]['objectId']
+
 
 #functions for calling on the api
 def deck_populate(slide_ID, iteration):
@@ -246,12 +274,14 @@ def change_title():
     response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
                                                           body=body).execute()
 
-def notes_update(slide_notes_id, iteration):
+def notes_update(the_slides, iteration):
+    notes_id = the_slides[iteration].get('slideProperties')['notesPage']['notesProperties']['speakerNotesObjectId']
+    print(notes_id)
     requests = [
         {
             "insertText": {
-                "objectId": slide_notes_id,
-                "text": slides_content[iteration-1]}
+                "objectId": notes_id,
+                "text": speaker_notes[iteration-1]}
         }
      ]
 
@@ -268,11 +298,17 @@ for i in range(0, len(slide_urls)):
     unique_id = str(unique_id)
     deck_populate(unique_id,i)
 
-
+presentation = service.presentations().get(presentationId=PRESENTATION_ID).execute()
 slides = presentation.get('slides')
-for i in range(1, len(slides) + 1):
-    notes_id = slides[i].get('slideProperties')['notesPage']['notesProperties']['speakerNotesObjectId']
-    notes_update(notes_id, i)
+print(len(slides))
+title_id = slides[0].get('pageElements')[0]['objectId']
+subtitle_id = slides[0].get('pageElements')[1]['objectId']
+
+for i in range(len(slides)):
+    if i == 0:
+        pass
+    else:
+        notes_update(slides, i)
 
 change_title()
 time.sleep(1)
