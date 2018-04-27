@@ -6,7 +6,7 @@ from __future__ import print_function
 from apiclient.discovery import build
 from httplib2 import Http
 from oauth2client import file, client, tools
-
+import random
 # Setup the Slides API
 SCOPES = 'https://www.googleapis.com/auth/presentations'
 store = file.Storage('credentials.json')
@@ -17,7 +17,7 @@ if not creds or creds.invalid:
 service = build('slides', 'v1', http=creds.authorize(Http()))
 
 # Call the Slides API
-PRESENTATION_ID = '1dCx4leIpkSv--M8FfcM7g4c7SH6YDvIi-Vr9cGzS4HE'
+PRESENTATION_ID = '1kNgshD1_dMxGEdN-V_sakNEKJaJhbVbWjqwRc7EROIc'
 presentation = service.presentations().get(presentationId=PRESENTATION_ID).execute()
 slides = presentation.get('slides')
 title_id = slides[0].get('pageElements')[0]['objectId']
@@ -65,8 +65,79 @@ def notes_update(the_slides, iteration):
                                                           body=body).execute()
 
 slides = presentation.get('slides')
-for i in range(len(slides)):
-    notes_update(slides, i)
+# for i in range(len(slides)):
+#     notes_update(slides, i)
+
+
+def deck_populate(slide_ID, iteration):
+    requests = [
+        {
+            'createSlide': {
+                'objectId': slide_ID,
+                'insertionIndex': '12',
+                "slideLayoutReference": {
+                    "predefinedLayout": "SECTION_TITLE_AND_DESCRIPTION"
+        }
+            }
+        }
+    ]
+
+    body = {
+        'requests': requests
+    }
+
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
+    create_slide_response = response.get('replies')[0].get('createSlide')
+    print('Created slide with ID: {0}'.format(create_slide_response.get('objectId')))
+
+
+unique_id = random.randint(1000,10000000000000000000000)
+unique_id = str(unique_id)
+deck_populate(unique_id,0)
+presentation = service.presentations().get(presentationId=PRESENTATION_ID).execute()
+slides = presentation.get('slides')
+last_title_id = slides[12].get('pageElements')[0]['objectId']
+last_subtitle_id = slides[12].get('pageElements')[1]['objectId']
+last_details_id = slides[12].get('pageElements')[2]['objectId']
+# final_slide_text(unique_id)
+
+
+def change_final():
+    requests = [
+        {
+            "insertText": {
+                "objectId": last_title_id,
+                "text": "THANK YOU",
+                "insertionIndex": 0
+            }
+        }
+     ]
+
+    body = {
+            'requests': requests
+    }
+
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
+    requests = [
+        {
+            "insertText": {
+                "objectId": last_details_id,
+                "text": "Twitter: @miamiworldwide\nGithub: miamiww\nwww.alden.website",
+                "insertionIndex": 0
+            }
+        }
+     ]
+    body = {
+            'requests': requests
+    }
+
+    response = service.presentations().batchUpdate(presentationId=PRESENTATION_ID,
+                                                          body=body).execute()
+
+
+change_final()
 
 print ('The presentation contains {} slides:'.format(len(slides)))
 # for i, slide in enumerate(slides):

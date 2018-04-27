@@ -1,0 +1,3 @@
+cd /Users/aljones/ITP/Year1/Semester2/Detourning/final_project
+source venv/bin/activate
+python slideshare.py
